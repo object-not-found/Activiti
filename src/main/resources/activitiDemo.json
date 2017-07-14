@@ -1,0 +1,407 @@
+{
+  "front-version": "2.4.1",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Project",
+      "id": "8CE8435C-3C32-450B-A4CA-CE688296B7DF",
+      "lastModified": "2017-07-14T16:39:40.254+08:00",
+      "name": "activitiDemo"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "processKey",
+              "value": "myProcess"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/activiti/start"
+      },
+      "id": "9FF0650B-40C8-487A-8687-D21EE62F5E68",
+      "lastModified": "2017-07-14T14:39:40.977+08:00",
+      "name": "启动流程实例",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "8CE8435C-3C32-450B-A4CA-CE688296B7DF"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "taskId",
+              "value": "35005"
+            },
+            {
+              "enabled": true,
+              "name": "nextTaskId",
+              "value": "usertask9"
+            },
+            {
+              "enabled": true,
+              "name": "userId",
+              "value": "C"
+            },
+            {
+              "enabled": true,
+              "name": "result",
+              "value": "false"
+            },
+            {
+              "enabled": true,
+              "name": "note",
+              "value": "拒绝"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/activiti/completeTask"
+      },
+      "id": "CFAFB28C-A26C-45F9-95D5-5F29F38555E0",
+      "lastModified": "2017-07-14T16:39:40.257+08:00",
+      "name": "完成任务",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "8CE8435C-3C32-450B-A4CA-CE688296B7DF"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "userId",
+              "value": "xiaoliu"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/activiti/myTaskList"
+      },
+      "id": "A2CCAE85-FF64-409C-B4B1-85106A8CB391",
+      "lastModified": "2017-07-14T15:00:01.228+08:00",
+      "name": "待办任务",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "8CE8435C-3C32-450B-A4CA-CE688296B7DF"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "userId",
+              "value": "xiaoliu"
+            },
+            {
+              "enabled": true,
+              "name": "taskId",
+              "value": "2504"
+            },
+            {
+              "enabled": true,
+              "name": "nextUserId",
+              "value": "xiaoowang"
+            },
+            {
+              "enabled": true,
+              "name": "note",
+              "value": "小王代办"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/activiti/transfer"
+      },
+      "id": "EF2C29F4-BA4D-45E7-982C-AF3103B67D53",
+      "lastModified": "2017-07-14T15:09:01.102+08:00",
+      "name": "授权审批",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "8CE8435C-3C32-450B-A4CA-CE688296B7DF"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "taskId",
+              "value": "2504"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/activiti/viewTask"
+      },
+      "id": "FF4DC537-6459-4F31-8B7E-B7F12994EA25",
+      "lastModified": "2017-07-14T15:00:15.682+08:00",
+      "name": "查看任务",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "8CE8435C-3C32-450B-A4CA-CE688296B7DF"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "userId",
+              "value": "deptA1"
+            },
+            {
+              "enabled": true,
+              "name": "role",
+              "value": "deptA1"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/activiti/findTaskList"
+      },
+      "id": "C5BE8E39-A3FB-48D4-9A07-2C90C8CFA053",
+      "lastModified": "2017-07-14T14:51:08.143+08:00",
+      "name": "查看任务列表",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "8CE8435C-3C32-450B-A4CA-CE688296B7DF"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "processInstanceId",
+              "value": "2501"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/activiti/findApproveNotesList"
+      },
+      "id": "8BC14AF1-DF9E-497E-B74B-549C5D7958C5",
+      "lastModified": "2017-07-14T16:08:40.690+08:00",
+      "name": "查询审批记录",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "8CE8435C-3C32-450B-A4CA-CE688296B7DF"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/activiti/findProcessList"
+      },
+      "id": "C350CCC1-01BA-4BCE-B1CE-C20E8D552B6E",
+      "lastModified": "2017-07-14T14:32:07.113+08:00",
+      "name": "查询流程定义列表",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "8CE8435C-3C32-450B-A4CA-CE688296B7DF"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "taskId",
+              "value": "2504"
+            },
+            {
+              "enabled": true,
+              "name": "userId",
+              "value": "xiaoliu"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/activiti/claimTask"
+      },
+      "id": "E07ABCC3-3363-4E8D-A275-19BDF75D00FC",
+      "lastModified": "2017-07-14T14:53:02.501+08:00",
+      "name": "签收任务",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "8CE8435C-3C32-450B-A4CA-CE688296B7DF"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "deployName",
+              "value": "MyProcess1"
+            }
+          ]
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/activiti/deploy"
+      },
+      "id": "0D5F79A4-6A7F-4420-829A-AA211D7036A7",
+      "lastModified": "2017-07-14T13:46:39.820+08:00",
+      "name": "部署流程定义",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "8CE8435C-3C32-450B-A4CA-CE688296B7DF"
+    }
+  ]
+}
